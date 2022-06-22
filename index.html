@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+
+    <section id="anasayfa">
+    <div class="hero">
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <img src="./image/logo.png" >
+
+
+            </div>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-close"  onclick="closeMenu()"></i>
+
+                <ul>
+                    <a href="#anasayfa"><li>Anasayfa</li></a>
+                    <a href="#hakkinda"><li>Hakkında</li></a>
+                    <a href="#gorsel"><li>Görseller</li></a>
+                    <a href=""><li>Konum</li></a>
+                    <a href=""><li>İletişim</li></a>
+                </ul>
+                <button type="button" class="btn" >Giriş Yap</button>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </div>
+
+        <div class="banner-title">
+
+            <h1>Alarko <span>Gayrimenkul <br>Yatırım</span> Ortaklığı</h1>
+            <button class="btn" type="button">Keşfet</button>
+        </div>
+
+        <div class="vertical-bar">
+            <div class="search-icon">
+                <i class="fa fa-list" ></i>
+                <i class="fa fa-search" ></i>
+            </div>
+            <div class="social-icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+
+            </div>
+        </div>
+
+        <div class="notifications">
+            <div class="contents">
+                <small></small>
+            </div>
+           
+            <div class="destek">
+                <h2 class="w3-center"> Destek</h2>
+                <div class="notification-img">
+                    <img src="./image/logo.png" >
+                    <p>Destek Bölümüne Hoşgeldiniz</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    
+
+
+    <div class="resimler">
+
+
+        <div class="w3-content w3-section" style="max-width:500px">
+            <img class="mySlides" src="./image/evresmi.jpg" style="width:150%">
+            <img class="mySlides" src="./image/evresmi2.jpg" style="width:150%">
+            <img class="mySlides" src="./image/ev3.jpg" style="width:150%">
+            <img class="mySlides" src="./image/ev4.jpg" style="width:150%">
+           
+          </div>
+    </div>
+  
+    </section>
+
+
+
+    <section class="hakkinda" id="hakkinda">
+
+        <div class="bilgi">
+            <h1>Hakkında</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laborum quod ipsa, eum eligendi cum blanditiis quae soluta exercitationem magni numquam necessitatibus nostrum quia neque earum amet commodi vero culpa, similique natus harum quaerat sit minima eveniet. Error libero eos doloremque neque. Saepe optio dolore earum eos molestiae corporis reprehenderit.</p>
+
+
+        </div>
+
+
+
+        <div class="hakkindaresim">
+            <img src="./image/yeni.png">
+        </div>
+
+
+
+    </section>
+
+
+    
+
+    <section class="gorsel">
+        
+        <h1>Görsellerimiz</h1>
+        <div class="w3-content w3-section" style="max-width:500px">
+            <img class="mySlides" src="./image/evresmi.jpg" style="width:150%">
+            <img class="mySlides" src="./image/evresmi2.jpg" style="width:150%">
+            <img class="mySlides" src="./image/ev3.jpg" style="width:150%">
+            <img class="mySlides" src="./image/ev4.jpg" style="width:150%">
+            <img class="mySlides" src="./image/background.jpg" style="width:150%">
+        
+          </div>
+
+    </section>
+
+
+
+
+
+
+
+    <script>
+        var show = document.getElementById("nav-links");
+        function showMenu(){
+            show.style.right="0";
+        }
+        function closeMenu(){
+            show.style.right="-200px";
+        }
+
+
+        var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.12),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+    </script>
+</body>
+</html>
